@@ -1,141 +1,165 @@
-:root{
+:root {
   font-size: 18px;
 }
-body{
-  padding-top: 5rem;
+body {
+  padding-top: 6rem;
 }
 
-
-
-
-.page-header{
+.page-header {
   padding: 0.5em;
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  top: 0;
   z-index: 999;
-  background-color: #204100;
+  background-color: salmon;
   box-shadow: 0 2px 10px;
 }
-.page-header__list{
+.page-header__list {
   padding: 0;
   list-style: none;
   text-align: center;
 }
-.page-header__list-item{
+.page-header__list-item {
   display: inline-block;
 }
-.page-header__link{
+.page-header__link {
   padding: 1.5em;
-  background-color: #5cc516be;
+  background-color: #ffffff44;
   color: inherit;
 }
-.page-header__link:hover{
-  /* transition: 1000ms; */
-  background-color: #80FF00;
-  color: blanchedalmond;
-  transition: color 1s ease-in-out 0.1s, background-color 0.5s ease-in-out 0.1s;
-  /* transition-property: color, background-color;
-  transition-duration: 1s;
-  transition-delay: 0, 1s;
-  transition-timing-function: linear;*/
-} 
+.page-header__link:hover {
+  background-color: lime;
+  color: wheat;
+  /* transition: color 1s ease-in-out 0.5s, background-color 2s ease-in-out 0.5s; */
+  transition-property: color, background-color;
+  transition-duration: 0.7s;
+  transition-delay: 0, 0.3s;
+  transition-timing-function: linear;
+}
 
 
 
 
-.main-article__heading{
-  position: relative;
+/* border: 20px groove rgb(121, 0, 0) */
+
+
+
+.main-article__heading {
   width: 50%;
   margin: auto;
+
+  position: relative;
+  transition-property: color, font-size, border;
+  transition-duration: 0.6s, 0.8s, 0.8s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+
+  background-color: rgb(255, 202, 237);
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+.main-article__heading:hover{
+  font-size: 2.4rem;
+  color: rgb(77, 28, 175);
+  border: 20px groove rgb(121, 0, 0);
 }
 
 .main-article__heading::before{
-  display: block;
   content: "";
-  height: 5px;
-  width: 0;
+  display: block;
+  height: 8px;
+  width: 0px;
 
   transition: width 0.8s ease-in-out;
 
-  background-color: rgb(179, 0, 30);
-  font-size: 0.5em;
+  background-color: rgb(171, 8, 35);
 }
+.main-article__heading:hover::before{
+  width: 100%;
+}
+
 .main-article__heading::after{
-  display: block;
-  content: "!!!";
-}
-/* .main-article__heading::before{
-  display: block;
+  /*home work TRANSITION*/
   content: "";
-  height: 1em;
-  width: 20%;
-  margin: auto;
-  background-color: pink;
-  font-size: 0.5em;
-}
-.main-article__heading::after{
   display: block;
-  content: "!!!";
-} */
+  height: 8px;
+  width: 0px;
+
+  transition: width 0.8s ease-in-out;
+
+  background-color: rgb(171, 8, 35);
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform-origin: right;
+}
+.main-article__heading:hover::after{
+  width: 100%;
+  transform-origin: left;
+}
+
+
+
+
+
+
+ /*
 .main-article__heading::before,
-.main-article__heading::after{
-  /* content: url(./../images/lattice+pattern-1324760595503480141.png); */
-  content: url(./../icons/account-circle.svg);
+.main-article__heading::after {
+  content: url(./../images/pattern.jpeg); 
+  content: url(./../icons/white-balance-sunny.svg); 
+  content: '🔗';
   display: inline-block;
   width: 40px;
 
   position: absolute;
+  top: -4px;
 
-  color: cornflowerblue;
-
+  color: red;
 }
-
-.main-article__heading::before{
+.main-article__heading::before {
   right: 100%;
 }
-.main-article__heading::after{
+.main-article__heading::after {
   left: 100%;
 }
 
-.main-article__content::first-letter{
+
+.main-article__content::first-letter {
   padding: 0.1em;
   margin-left: 1em;
 
   background-color: yellow;
   color: magenta;
 
-  color: #A7DD3C;
-  background: #FFFFFF;
-  text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #FFD500, 11px 0 18px #806A00, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #D4FF00, 14px 0 30px #6A8000, 15px 2px 30px rgba(64,77,0,0.5), 15px 0 45px #80FF00, 17px 0 45px #408000, 17px 2px 45px rgba(38,77,0,0.5);
-  color: #A7DD3C;
-  background: #FFFFFF;
-
   font-size: 3rem;
   font-weight: 900;
   font-family: monospace;
 }
-.main-article__content::first-line{
-  /* background-color: magenta; */
-    /* background-image: url(./../images/lattice+pattern-1324760595503480141.png); */
-background: -moz-radial-gradient(center, ellipse cover,  rgba(30,154,82,0) 0%, rgba(30,154,82,0.8) 15%, rgba(30,154,82,1) 19%, rgba(30,154,82,1) 20%, rgba(42,216,100,1) 44%, rgba(30,154,82,1) 80%, rgba(30,154,82,1) 81%, rgba(30,154,82,0.8) 85%, rgba(30,154,82,0) 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(30,154,82,0) 0%,rgba(30,154,82,0.8) 15%,rgba(30,154,82,1) 19%,rgba(30,154,82,1) 20%,rgba(42,216,100,1) 44%,rgba(30,154,82,1) 80%,rgba(30,154,82,1) 81%,rgba(30,154,82,0.8) 85%,rgba(30,154,82,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center,  rgba(30,154,82,0) 0%,rgba(30,154,82,0.8) 15%,rgba(30,154,82,1) 19%,rgba(30,154,82,1) 20%,rgba(42,216,100,1) 44%,rgba(30,154,82,1) 80%,rgba(30,154,82,1) 81%,rgba(30,154,82,0.8) 85%,rgba(30,154,82,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e9a52', endColorstr='#001e9a52',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.main-article__content::first-line {
+  background-color: magenta; */
+  /* background-image: url(./../images/pattern.jpeg); */
+  /* background: #ffffff;
+  background: #ff3030; */
+  /* background: -moz-radial-gradient(center, ellipse cover,  #ff3030 12%, #ff3030 12%, #ff3030 47%, #ffffff 47%, #ffffff 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  #ff3030 12%,#ff3030 12%,#ff3030 47%,#ffffff 47%,#ffffff 100%);
+  background: radial-gradient(ellipse at center,  #ff3030 12%,#ff3030 12%,#ff3030 47%,#ffffff 47%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3030', endColorstr='#ffffff',GradientType=1 ); */
 
-  background-repeat: round;
-  background-size: 2%;
-  background-position: right top;
-  color: rgba(37, 37, 0, 0.644);
+  /* background-repeat: repeat;
+  background-size: 40px 40px;
+  background-position: left top; 
+  color: yellow;
 
-  font-size: 1.8em;
+  text-shadow: -5px 5px 0px #00e6e6;
+
+  font-size: 1.8rem;
   line-height: 2em;
 }
-.main-article__content::selection{
+.main-article__content::selection {
   background-color: green;
   color: wheat;
-}
+} */
